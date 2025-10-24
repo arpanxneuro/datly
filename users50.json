@@ -1,0 +1,452 @@
+[
+  {
+    "user_id": 1,
+    "first_name": "Arpan",
+    "last_name": "Sharma",
+    "email": "arpan@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-01-15"
+  },
+  {
+    "user_id": 2,
+    "first_name": "Sneha",
+    "last_name": "Kaur",
+    "email": "sneha@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-02-20"
+  },
+  {
+    "user_id": 3,
+    "first_name": "Rohit",
+    "last_name": "Verma",
+    "email": "rohit@sox.in",
+    "age": 23,
+    "country": "USA",
+    "signup_date": "2025-03-10"
+  },
+  {
+    "user_id": 4,
+    "first_name": "Priya",
+    "last_name": "Singh",
+    "email": "priya@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-04-05"
+  },
+  {
+    "user_id": 5,
+    "first_name": "Amit",
+    "last_name": "Patel",
+    "email": "amit@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-05-12"
+  },
+  {
+    "user_id": 6,
+    "first_name": "Ananya",
+    "last_name": "Gupta",
+    "email": "ananya@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-05-18"
+  },
+  {
+    "user_id": 7,
+    "first_name": "Karan",
+    "last_name": "Reddy",
+    "email": "karan@sox.in",
+    "age": 23,
+    "country": "Canada",
+    "signup_date": "2025-05-25"
+  },
+  {
+    "user_id": 8,
+    "first_name": "Meera",
+    "last_name": "Jain",
+    "email": "meera@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-06-01"
+  },
+  {
+    "user_id": 9,
+    "first_name": "Rajesh",
+    "last_name": "Shah",
+    "email": "rajesh@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-06-08"
+  },
+  {
+    "user_id": 10,
+    "first_name": "Sana",
+    "last_name": "Kapoor",
+    "email": "sana@sox.in",
+    "age": 22,
+    "country": "Australia",
+    "signup_date": "2025-06-15"
+  },
+  {
+    "user_id": 11,
+    "first_name": "Aditya",
+    "last_name": "Mishra",
+    "email": "aditya@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-06-22"
+  },
+  {
+    "user_id": 12,
+    "first_name": "Divya",
+    "last_name": "Banerjee",
+    "email": "divya@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-06-29"
+  },
+  {
+    "user_id": 13,
+    "first_name": "Vikram",
+    "last_name": "Chopra",
+    "email": "vikram@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-07-06"
+  },
+  {
+    "user_id": 14,
+    "first_name": "Neha",
+    "last_name": "Desai",
+    "email": "neha@sox.in",
+    "age": 22,
+    "country": "UK",
+    "signup_date": "2025-07-13"
+  },
+  {
+    "user_id": 15,
+    "first_name": "Rahul",
+    "last_name": "Gupta",
+    "email": "rahul@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-07-20"
+  },
+  {
+    "user_id": 16,
+    "first_name": "Shruti",
+    "last_name": "Mehta",
+    "email": "shruti@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-07-27"
+  },
+  {
+    "user_id": 17,
+    "first_name": "Ankit",
+    "last_name": "Joshi",
+    "email": "ankit@sox.in",
+    "age": 24,
+    "country": "Germany",
+    "signup_date": "2025-08-03"
+  },
+  {
+    "user_id": 18,
+    "first_name": "Parul",
+    "last_name": "Sharma",
+    "email": "parul@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-08-10"
+  },
+  {
+    "user_id": 19,
+    "first_name": "Manish",
+    "last_name": "Khan",
+    "email": "manish@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-08-17"
+  },
+  {
+    "user_id": 20,
+    "first_name": "Isha",
+    "last_name": "Patel",
+    "email": "isha@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-08-24"
+  },
+  {
+    "user_id": 21,
+    "first_name": "Nikhil",
+    "last_name": "Singh",
+    "email": "nikhil@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-08-31"
+  },
+  {
+    "user_id": 22,
+    "first_name": "Simran",
+    "last_name": "Verma",
+    "email": "simran@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-09-07"
+  },
+  {
+    "user_id": 23,
+    "first_name": "Rahul",
+    "last_name": "Kaur",
+    "email": "rahulk@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-09-14"
+  },
+  {
+    "user_id": 24,
+    "first_name": "Ashwini",
+    "last_name": "Reddy",
+    "email": "ashwini@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-09-21"
+  },
+  {
+    "user_id": 25,
+    "first_name": "Vishal",
+    "last_name": "Jain",
+    "email": "vishal@sox.in",
+    "age": 24,
+    "country": "France",
+    "signup_date": "2025-09-28"
+  },
+  {
+    "user_id": 26,
+    "first_name": "Pooja",
+    "last_name": "Shah",
+    "email": "pooja@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-10-05"
+  },
+  {
+    "user_id": 27,
+    "first_name": "Anurag",
+    "last_name": "Kapoor",
+    "email": "anurag@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-10-12"
+  },
+  {
+    "user_id": 28,
+    "first_name": "Kritika",
+    "last_name": "Mishra",
+    "email": "kritika@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-10-19"
+  },
+  {
+    "user_id": 29,
+    "first_name": "Sumit",
+    "last_name": "Banerjee",
+    "email": "sumit@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-10-26"
+  },
+  {
+    "user_id": 30,
+    "first_name": "Riya",
+    "last_name": "Chopra",
+    "email": "riya@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-11-02"
+  },
+  {
+    "user_id": 31,
+    "first_name": "Harsh",
+    "last_name": "Desai",
+    "email": "harsh@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-11-09"
+  },
+  {
+    "user_id": 32,
+    "first_name": "Megha",
+    "last_name": "Gupta",
+    "email": "megha@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-11-16"
+  },
+  {
+    "user_id": 33,
+    "first_name": "Rohan",
+    "last_name": "Khan",
+    "email": "rohan@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-11-23"
+  },
+  {
+    "user_id": 34,
+    "first_name": "Aanya",
+    "last_name": "Patel",
+    "email": "aanya@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-11-30"
+  },
+  {
+    "user_id": 35,
+    "first_name": "Tanmay",
+    "last_name": "Singh",
+    "email": "tanmay@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2025-12-07"
+  },
+  {
+    "user_id": 36,
+    "first_name": "Swati",
+    "last_name": "Verma",
+    "email": "swati@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2025-12-14"
+  },
+  {
+    "user_id": 37,
+    "first_name": "Raj",
+    "last_name": "Kaur",
+    "email": "raj@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2025-12-21"
+  },
+  {
+    "user_id": 38,
+    "first_name": "Neeraj",
+    "last_name": "Reddy",
+    "email": "neeraj@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2025-12-28"
+  },
+  {
+    "user_id": 39,
+    "first_name": "Shreya",
+    "last_name": "Jain",
+    "email": "shreya@sox.in",
+    "age": 23,
+    "country": "Italy",
+    "signup_date": "2026-01-04"
+  },
+  {
+    "user_id": 40,
+    "first_name": "Anil",
+    "last_name": "Shah",
+    "email": "anil@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2026-01-11"
+  },
+  {
+    "user_id": 41,
+    "first_name": "Priyanka",
+    "last_name": "Kapoor",
+    "email": "priyanka@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2026-01-18"
+  },
+  {
+    "user_id": 42,
+    "first_name": "Akash",
+    "last_name": "Mishra",
+    "email": "akash@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2026-01-25"
+  },
+  {
+    "user_id": 43,
+    "first_name": "Varsha",
+    "last_name": "Banerjee",
+    "email": "varsha@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2026-02-01"
+  },
+  {
+    "user_id": 44,
+    "first_name": "Karan",
+    "last_name": "Chopra",
+    "email": "karanchopra@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2026-02-08"
+  },
+  {
+    "user_id": 45,
+    "first_name": "Rekha",
+    "last_name": "Desai",
+    "email": "rekha@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2026-02-15"
+  },
+  {
+    "user_id": 46,
+    "first_name": "Aditya",
+    "last_name": "Gupta",
+    "email": "adityagupta@sox.in",
+    "age": 22,
+    "country": "India",
+    "signup_date": "2026-02-22"
+  },
+  {
+    "user_id": 47,
+    "first_name": "Simran",
+    "last_name": "Khan",
+    "email": "simrankhan@sox.in",
+    "age": 23,
+    "country": "India",
+    "signup_date": "2026-03-01"
+  },
+  {
+    "user_id": 48,
+    "first_name": "Devika",
+    "last_name": "Patel",
+    "email": "devika@sox.in",
+    "age": 21,
+    "country": "India",
+    "signup_date": "2026-03-08"
+  },
+  {
+    "user_id": 49,
+    "first_name": "Mayank",
+    "last_name": "Singh",
+    "email": "mayank@sox.in",
+    "age": 24,
+    "country": "India",
+    "signup_date": "2026-03-15"
+  },
+  {
+    "user_id": 50,
+    "first_name": "Sneha",
+    "last_name": "Verma",
+    "email": "snehaverma@sox.in",
+    "age": 22,
+    "country": "Spain",
+    "signup_date": "2026-03-22"
+  }
+]
