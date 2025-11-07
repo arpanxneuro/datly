@@ -1,0 +1,13 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "@site/*": ["./*"]
+    },
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "types": ["node"]
+  },
+  "include": ["src", "docs"],
+  "exclude": [".docusaurus", "build"]
+}

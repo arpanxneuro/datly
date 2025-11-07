@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "json2csv": "6.0.0-alpha.2"
+  }
+}
