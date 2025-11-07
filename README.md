@@ -36,6 +36,11 @@
 
 ---
 
+## 📌 Keywords / Tags  
+`dummy‑data` `api` `fake‑data` `rest‑api` `nodejs` `express` `typescript` `developers‑tool` `open‑source` `data‑generator` `prototyping` `dev‑tool` `testing‑data` `mock‑data` `documentation`
+
+---
+
 ## ⚡ API Overview
 
 | Endpoint    | Description           | Sample URL                                         |
