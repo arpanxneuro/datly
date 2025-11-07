@@ -16,4 +16,5 @@ Our goal is to provide you with quick, realistic, and structured JSON responses 
 Use the following base URL for all your API requests:
 
 ```bash
-https://api.datly.dev/v1
+https://datly-api.onrender.com
+```

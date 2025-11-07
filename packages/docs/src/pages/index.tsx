@@ -17,8 +17,22 @@ function HomepageHeader(): ReactNode {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container text--center">
-        <Heading as="h1" className="hero__title">
-          🧭 {siteConfig.title}
+        <Heading
+          as="h1"
+          className="hero__title"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src="/img/logo.png"
+            height={45}
+            width={45}
+            style={{ marginRight: "7px", marginTop: "3px" }}
+          />{" "}
+          {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">
           {siteConfig.tagline || "Mock JSON API for developers"}

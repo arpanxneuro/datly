@@ -242,7 +242,7 @@ export default function TryItOut({
             background: isDark ? "#374151" : "#e5e7eb",
             border: "none",
             borderRadius: "4px",
-            padding: "2px 6px",
+            padding: "3px 7px",
             cursor: "pointer",
           }}
         >

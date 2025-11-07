@@ -29,7 +29,8 @@ export default function DatlyExample() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await fetch("http://localhost:3125/users?limit=3");
+        const response = await fetch("
+        https://datly-api.onrender.com/users?limit=3");
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
         setUsers(data.users || []);
