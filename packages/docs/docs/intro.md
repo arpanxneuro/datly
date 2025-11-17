@@ -33,5 +33,5 @@ Datly is designed to be the **most flexible, developer-first fake data API** for
 All endpoints are accessible via HTTPS from our root API:
 
 ```bash
-https://datly-api.onrender.com
+https://api-datly.vercel.app
 ```
