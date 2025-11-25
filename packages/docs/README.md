@@ -1,7 +1,5 @@
 # Datly API Documentation
 
-> A free fake JSON API for developers, built with Docsify
-
 [API](https://datly-api.onrender.com) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly.pages.dev)
 
 ---
@@ -28,7 +26,3 @@ https://api-datly.vercel.app
 - [Live API](https://datly-api.onrender.com)
 - [GitHub](https://github.com/arpanxneuro/datly)
 - [Docs Site](https://datly.pages.dev)
-
-## 📝 License
-
-MIT

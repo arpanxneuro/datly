@@ -1,6 +1,6 @@
 {
   "name": "datly-docs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Datly - Fake JSON API Documentation",
   "scripts": {
@@ -10,8 +10,9 @@
     "dev": "docsify serve"
   },
   "dependencies": {
-    "docsify": "^4.13.0",
+    "docsify": "^4.13.1",
     "docsify-cli": "^4.4.4"
+
   },
   "devDependencies": {
     "docsify-cli": "^4.4.4"

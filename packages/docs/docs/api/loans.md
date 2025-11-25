@@ -1,24 +1,57 @@
----
-id: loans
-title: Loans API
-sidebar_position: 6
----
-
-# 💸 Loans API
-
 Generate synthetic loan records for financial dashboards and model testing.
-
-```http
-GET /loans?limit=10
-```
-
 ---
 
 ## 🧩 Endpoint
 
-import TryItOut from "@site/src/components/TryItOut";
+### Demo Response (Kaggle-style schema)
 
-<TryItOut endpoint="/loans" defaultLimit={5} />
+Example request:
+
+```http
+GET /loans?limit=2
+```
+
+Example JSON response:
+
+```json
+{
+	"total": 2,
+	"loans": [
+		{
+			"Loan_ID": "AB12CD34",
+			"Gender": "Male",
+			"Married": "Yes",
+			"Dependents": "0",
+			"Education": "Graduate",
+			"Self_Employed": "No",
+			"ApplicantIncome": 4500,
+			"CoapplicantIncome": 0,
+			"LoanAmount": 120.5,
+			"Loan_Amount_Term": 360,
+			"Credit_History": 1.0,
+			"Property_Area": "Urban",
+			"Loan_Status": "Y",
+			"SanctionedDate": "2024-07-15T00:00:00.000Z"
+		},
+		{
+			"Loan_ID": "EF56GH78",
+			"Gender": "Female",
+			"Married": "No",
+			"Dependents": "1",
+			"Education": "Not Graduate",
+			"Self_Employed": "Yes",
+			"ApplicantIncome": 3200,
+			"CoapplicantIncome": 1200,
+			"LoanAmount": 85.0,
+			"Loan_Amount_Term": 240,
+			"Credit_History": 0.0,
+			"Property_Area": "Semiurban",
+			"Loan_Status": "N",
+			"SanctionedDate": "2025-02-01T00:00:00.000Z"
+		}
+	]
+}
+```
 
 ---
 

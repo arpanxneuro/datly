@@ -1,0 +1,99 @@
+:root {
+  /* Brand Colors */
+  --primary-color: #3399ff;       /* Bright-ish blue from your logo */
+  --secondary-color: #33ccff;     /* Lighter complementary cyan */
+  
+  /* Text & Neutral Colors */
+  --text-color: #e0e6f2;           /* Very light */
+  --text-color-secondary: #a3a9b6; /* Muted light grey */
+  
+  /* Backgrounds & Surfaces */
+  --background-color: #0d1117;       /* Deep dark, very close to logo bg */
+  --sidebar-background: #0b0f16;     /* Slightly darker than main bg */
+  --border-color: #30363d;            /* Subdued border tone */
+  
+  /* Code & Highlighting */
+  --code-background-color: #161b22;  /* Code block background */
+  --code-text-color: #79c0ff;        /* Code text, matching blue-ish tone */
+  --code-border-color: #30363d;      /* Border for code blocks */
+  
+  /* Links / Interactions */
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--secondary-color);
+  
+  /* Alerts / Semantic Variants */
+  --alert-info-bg: #003f88;
+  --alert-info-border: var(--primary-color);
+  --alert-success-bg: #0f6331;
+  --alert-success-border: #28a745;
+  --alert-warning-bg: #6d3b00;
+  --alert-warning-border: #d29922;
+  --alert-danger-bg: #6e1205;
+  --alert-danger-border: #f85149;
+}
+
+/* Base layout */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar, .sidebar a {
+  background-color: var(--sidebar-background) !important;
+  color: var(--text-color) !important;
+}
+
+.sidebar-links { list-style: none; padding-left: 0; margin: 8px 0; }
+.sidebar-links li { padding: 6px 8px; }
+.sidebar-links li a { color: var(--text-color-secondary); text-decoration: none; }
+.sidebar-links li a:hover { color: var(--link-color); }
+
+/* Navbar */
+.navbar { background-color: var(--sidebar-background) !important; border-bottom: 1px solid var(--border-color); }
+.navbar a { color: var(--text-color); }
+.navbar a:hover { color: var(--link-color); }
+
+/* Links */
+a { color: var(--link-color); }
+a:hover { color: var(--link-hover-color); text-decoration: underline; }
+
+/* Code blocks and inline code */
+code, pre, .code, .language-bash, .language-js {
+  background: var(--code-background-color) !important;
+  color: var(--code-text-color) !important;
+  border: 1px solid var(--code-border-color) !important;
+}
+
+pre.markdown-section, pre {
+  background: var(--code-background-color) !important;
+  border-radius: 6px; padding: 12px; overflow: auto;
+}
+
+/* Tables */
+.markdown-section table { border-collapse: collapse; }
+.markdown-section table th { background: var(--code-background-color); border: 1px solid var(--border-color); }
+.markdown-section table td { border: 1px solid var(--border-color); }
+
+/* Alerts */
+.alert { border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; }
+.alert-info { background: var(--alert-info-bg); border-left: 4px solid var(--alert-info-border); }
+.alert-success { background: var(--alert-success-bg); border-left: 4px solid var(--alert-success-border); }
+.alert-warning { background: var(--alert-warning-bg); border-left: 4px solid var(--alert-warning-border); }
+.alert-danger { background: var(--alert-danger-bg); border-left: 4px solid var(--alert-danger-border); }
+
+/* Buttons */
+button, .button { background: var(--primary-color); color: #fff; border-radius: 6px; padding: 8px 12px; border: none; cursor: pointer; }
+button:hover, .button:hover { background: var(--secondary-color); }
+
+/* Search input */
+.search input { background-color: var(--code-background-color) !important; border: 1px solid var(--border-color) !important; color: var(--text-color) !important; }
+
+/* Small utilities */
+.markdown-section blockquote { border-left: 4px solid var(--primary-color); background: rgba(21,32,43,0.4); padding: 10px 14px; }
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .sidebar { display: none !important; }
+}

@@ -1,26 +1,53 @@
----
-id: users
-title: Users API
-sidebar_position: 1
----
-
-# 👥 Users API
-
 Retrieve dynamically generated user data from **Datly** — ideal for mock testing, frontend development, or AI-driven prototypes.
-
-```http
-GET /users?limit=10
-```
 
 ---
 
 ## 🧩 Endpoint
 
-Try it live below 👇
+### Demo Response
 
-import TryItOut from "@site/src/components/TryItOut";
+Example request:
 
-<TryItOut endpoint="/users" defaultLimit={5} />
+```http
+GET /users?limit=3
+```
+
+Example JSON response:
+
+```json
+{
+	"total": 3,
+	"users": [
+		{
+			"id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+			"fname": "Maya",
+			"lname": "Patel",
+			"email": "maya.patel@example.com",
+			"avatar": "https://example.com/avatar/1.png",
+			"country": "India",
+			"joinedAt": "2025-11-10T09:12:34.567Z"
+		},
+		{
+			"id": "a3b1c2d3-e4f5-6789-abcd-0123456789ab",
+			"fname": "Liam",
+			"lname": "Nguyen",
+			"email": "liam.nguyen@example.com",
+			"avatar": "https://example.com/avatar/2.png",
+			"country": "United States",
+			"joinedAt": "2025-10-05T14:22:11.123Z"
+		},
+		{
+			"id": "b2c3d4e5-f6a7-8901-b234-56789abcdef0",
+			"fname": "Sara",
+			"lname": "Gonzalez",
+			"email": "sara.gonzalez@example.com",
+			"avatar": "https://example.com/avatar/3.png",
+			"country": "Spain",
+			"joinedAt": "2025-09-30T07:45:00.000Z"
+		}
+	]
+}
+```
 
 ---
 

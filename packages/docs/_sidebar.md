@@ -14,5 +14,5 @@
   - [News](/docs/api/news)
 
 - **Info**
-  - [Roadmap](/docs/roadmap)
+  <!-- - [Roadmap](/docs/roadmap) -->
   - [GitHub](https://github.com/arpanxneuro/datly)

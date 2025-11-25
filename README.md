@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://datly-api.onrender.com" target="_blank">
+  <a href="https://api-datly.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/API-Live-green?style=flat-square" alt="API Live">
   </a>
   <a href="https://datly.pages.dev" target="_blank">
@@ -36,22 +36,23 @@
 
 ---
 
-## 📌 Keywords / Tags  
+## 📌 Keywords / Tags
+
 `dummy‑data` `api` `fake‑data` `rest‑api` `nodejs` `express` `typescript` `developers‑tool` `open‑source` `data‑generator` `prototyping` `dev‑tool` `testing‑data` `mock‑data` `documentation`
 
 ---
 
 ## ⚡ API Overview
 
-| Endpoint    | Description           | Sample URL                                         |
-| ----------- | --------------------- | -------------------------------------------------- |
-| `/users`    | Fetch random users    | `https://datly-api.onrender.com/users?limit=10`    |
-| `/products` | Fetch random products | `https://datly-api.onrender.com/products?limit=10` |
-| `/posts`    | Fetch random posts    | `https://datly-api.onrender.com/posts?limit=10`    |
-| `/comments` | Fetch random comments | `https://datly-api.onrender.com/comments?limit=10` |
-| `/likes`    | Fetch random likes    | `https://datly-api.onrender.com/likes?limit=10`    |
-| `/loans`    | Fetch random loans    | `https://datly-api.onrender.com/loans?limit=10`    |
-| `/news`     | Fetch random news     | `https://datly-api.onrender.com/news?limit=10`     |
+| Endpoint    | Description           | Sample URL                                       |
+| ----------- | --------------------- | ------------------------------------------------ |
+| `/users`    | Fetch random users    | `https://api-datly.vercel.app/users?limit=10`    |
+| `/products` | Fetch random products | `https://api-datly.vercel.app/products?limit=10` |
+| `/posts`    | Fetch random posts    | `https://api-datly.vercel.app/posts?limit=10`    |
+| `/comments` | Fetch random comments | `https://api-datly.vercel.app/comments?limit=10` |
+| `/likes`    | Fetch random likes    | `https://api-datly.vercel.app/likes?limit=10`    |
+| `/loans`    | Fetch random loans    | `https://api-datly.vercel.app/loans?limit=10`    |
+| `/news`     | Fetch random news     | `https://api-datly.vercel.app/news?limit=10`     |
 
 > Every endpoint supports the `limit` query param (default: 10). Example response is with `limit: 1`
 
