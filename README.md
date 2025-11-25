@@ -30,9 +30,8 @@
 - REST API endpoints for **Users, Products, Posts, Likes, Comments, Loans, News**.
 - **Customizable query parameters**: pagination, limit, filters.
 - **Interactive API Playground** to test endpoints.
-- **Developer-friendly docs** built with Docusaurus 3.9.
-- Free, open-source, and easy to integrate into any project.
-- Future-proof: supports subdomains, GraphQL, and SSR-friendly architecture.
+- **Developer-friendly docs** built with Docsify 4.13.1.
+- Free, open-source, and easy to integrate into any project
 
 ---
 
