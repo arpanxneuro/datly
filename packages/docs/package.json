@@ -12,13 +12,12 @@
   "dependencies": {
     "docsify": "^4.13.1",
     "docsify-cli": "^4.4.4"
-
   },
   "devDependencies": {
     "docsify-cli": "^4.4.4"
   },
   "engines": {
-    "node": ">=14.0"
+    "node": ">=18.0"
   },
   "keywords": [
     "docsify",

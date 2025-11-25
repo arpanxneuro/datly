@@ -4,6 +4,8 @@
 # Production
 /build
 
+pnpm-lock.yaml
+
 # Generated files
 .cache-loader
 
