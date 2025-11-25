@@ -1,0 +1,12 @@
+/* Cloudflare Pages Redirect Rules */
+
+# Redirect old Docusaurus URLs to new Hugo structure (if needed)
+# /docs/* /docs/:splat 200
+
+# Security: Redirect HTTP to HTTPS (handled by Cloudflare automatically)
+
+# Redirect root to docs
+# /* /docs/:splat 200
+
+# 404 handling
+# /* /404.html 404

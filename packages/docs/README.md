@@ -1,41 +1,34 @@
-# Website
+# Datly API Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+> A free fake JSON API for developers, built with Docsify
 
-## Installation
+[API](https://datly-api.onrender.com) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly.pages.dev)
 
-```bash
-yarn
+---
+
+## 📖 Documentation
+
+Complete API documentation with examples for:
+- 👥 Users
+- 🛍️ Products  
+- 📝 Posts
+- 💬 Comments
+- 👍 Likes
+- 💰 Loans
+- 📰 News
+
+## 🌐 Base URL
+
+```
+https://api-datly.vercel.app
 ```
 
-## Local Development
+## 🔗 Links
 
-```bash
-yarn start
-```
+- [Live API](https://datly-api.onrender.com)
+- [GitHub](https://github.com/arpanxneuro/datly)
+- [Docs Site](https://datly.pages.dev)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 📝 License
 
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+MIT

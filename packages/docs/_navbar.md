@@ -1,0 +1,3 @@
+- [Datly](https://datly.pages.dev)
+- [API](https://api-datly.vercel.app)
+- [GitHub](https://github.com/arpanxneuro/datly)

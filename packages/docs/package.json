@@ -1,49 +1,31 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
+  "name": "datly-docs",
+  "version": "1.0.0",
   "private": true,
+  "description": "Datly - Fake JSON API Documentation",
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "start": "docsify serve",
+    "serve": "docsify serve .",
+    "build": "echo 'Docsify serves dynamically, no build needed'",
+    "dev": "docsify serve"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
-    "@docusaurus/theme-common": "3.9.2",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "docsify": "^4.13.0",
+    "docsify-cli": "^4.4.4"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/tsconfig": "3.9.2",
-    "@docusaurus/types": "3.9.2",
-    "@types/node": "^24.10.0",
-    "typescript": "~5.6.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
+    "docsify-cli": "^4.4.4"
   },
   "engines": {
-    "node": ">=20.0"
-  }
+    "node": ">=14.0"
+  },
+  "keywords": [
+    "docsify",
+    "documentation",
+    "api",
+    "fake-data",
+    "datly"
+  ],
+  "author": "Datly Team",
+  "license": "MIT"
 }
