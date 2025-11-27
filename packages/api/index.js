@@ -27,8 +27,8 @@ const DOCS_ROOT = path.join(__dirname, "..", "docs"); // packages/docs
 const DOCS_MD_ROOT = path.join(DOCS_ROOT, "docs"); // markdown files
 const DOCS_STATIC = path.join(DOCS_ROOT, "static"); // robots.txt, images
 const DOCS_ASSETS = path.join(DOCS_MD_ROOT, "assets"); // CSS, theme
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); // or wherever your template files live
+export const VIEWS_DIR = path.join(__dirname, "views");
+app.set("views", VIEWS_DIR);// or wherever your template files live
 
 // Serve static files (images, robots.txt, _redirects, etc.)
 app.use("/docs/static", express.static(DOCS_STATIC));

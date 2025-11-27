@@ -1,25 +1,36 @@
 import path from "path";
+import { fileURLToPath } from "url";
 import ejs from "ejs";
+import fs from "fs/promises";
 import sanitizeHtml from "sanitize-html";
 import grayMatter from "gray-matter";
-import fs from "fs/promises";
-import MarkdownIt from "markdown-it/index.js";
+import MarkdownIt from "markdown-it";
+import { Parser } from "json2csv";
 
-export const generateArray = (limit, fn) => Array.from({ length: limit }, fn);
+// ESM __dirname polyfill
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Absolute path to the views folder
+export const VIEWS_DIR = path.join(__dirname, "views");
 
 // Markdown Renderer (SSR)
 const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-  highlight: function (str, lang) {
-    return `<pre><code>${md.utils.escapeHtml(str)}</code></pre>`;
-  },
+  highlight: (str, lang) =>
+    `<pre><code>${md.utils.escapeHtml(str)}</code></pre>`,
 });
 
+// Generate array helper
+export const generateArray = (limit, fn) => Array.from({ length: limit }, fn);
+
+// Random null helper
 export const maybeNull = (value, allowNull) =>
   allowNull && Math.random() < 0.15 ? null : value;
 
+// Response helper
 export const respond = (res, data, format) => {
   if (format === "csv") {
     try {
@@ -36,48 +47,47 @@ export const respond = (res, data, format) => {
   }
 };
 
+// Render EJS template
 export function renderEJSFile(view, data = {}) {
+  const filePath = path.join(VIEWS_DIR, `${view}.ejs`);
   return new Promise((resolve, reject) => {
-    const filePath = path.join(process.cwd(), "views", `${view}.ejs`);
     ejs.renderFile(filePath, data, {}, (err, str) => {
-      if (err) return reject(err);
+      if (err) {
+        console.error("EJS render error:", err, "filePath:", filePath);
+        return reject(err);
+      }
       resolve(str);
     });
   });
 }
 
+// Minify HTML while preserving <pre> blocks
 function minifyHtml(html) {
-  // Step 1: Extract <pre> blocks so we don't touch code
   const preBlocks = [];
   html = html.replace(/<pre[\s\S]*?<\/pre>/gi, (match) => {
     preBlocks.push(match);
     return `@@PRE_BLOCK_${preBlocks.length - 1}@@`;
   });
-  // Step 2: Minify the rest of the HTML
+
   html = html
-    // Remove HTML comments
     .replace(/<!--[\s\S]*?-->/g, "")
-    // Minify <style> blocks
     .replace(/<style\b[^>]*>([\s\S]*?)<\/style>/gi, (match, css) => {
       const minifiedCss = css
-        .replace(/\/\*[\s\S]*?\*\//g, "") // remove CSS comments
-        .replace(/\s+/g, " ") // collapse whitespace
-        .replace(/\s*([{:;,}])\s*/g, "$1") // trim around syntax chars
-        .replace(/;}/g, "}"); // remove trailing semicolons
+        .replace(/\/\*[\s\S]*?\*\//g, "")
+        .replace(/\s+/g, " ")
+        .replace(/\s*([{:;,}])\s*/g, "$1")
+        .replace(/;}/g, "}");
       return `<style>${minifiedCss}</style>`;
     })
-    // Collapse whitespace between HTML tags
     .replace(/>\s+</g, "><")
-    // Remove extra newlines
     .replace(/\n+/g, "")
-    // Collapse multiple spaces
     .replace(/\s{2,}/g, " ");
-  // Step 3: Restore <pre> blocks without changes
-  html = html.replace(/@@PRE_BLOCK_(\d+)@@/g, (_, idx) => preBlocks[idx]);
 
+  html = html.replace(/@@PRE_BLOCK_(\d+)@@/g, (_, idx) => preBlocks[idx]);
   return html;
 }
 
+// Sanitization options for Markdown -> HTML
 const sanitizeOpts = {
   allowedTags: sanitizeHtml.defaults.allowedTags.concat([
     "img",
@@ -94,19 +104,21 @@ const sanitizeOpts = {
   },
 };
 
-// SSR Renderer: reads markdown file, renders HTML, sends wrapped response
+// Render Markdown file and wrap in EJS template
 export async function renderMarkdownFile(res, mdPath, reqPath = "") {
   try {
     const raw = await fs.readFile(mdPath, "utf8");
     const { data: frontmatter, content: mdContent } = grayMatter(raw);
+
     const htmlBody = md.render(mdContent);
     const safeBody = sanitizeHtml(htmlBody, sanitizeOpts);
+
     const normalizeMeta = (v) => (v ? String(v).replace(/"/g, "&quot;") : "");
-    // Extract metadata
+
     const title = normalizeMeta(frontmatter.title || "Datly");
     const description = normalizeMeta(
       frontmatter.description ||
-        "Datly is a developer‑centric REST API platform designed for rapid prototyping and seamless integration — delivering realistic, structured mock data of fake Users, Comments, Posts, Products, Loans, Likes and News, with flexible query parameters for pagination, limits and filters so developers can test, iterate and launch with confidence."
+        "Datly is a developer‑centric REST API platform delivering realistic mock data of Users, Comments, Posts, Products, Loans, Likes and News for prototyping."
     );
     const author = normalizeMeta(frontmatter.author || "Datly Team");
     const date = normalizeMeta(frontmatter.date || new Date().toISOString());
@@ -119,6 +131,7 @@ export async function renderMarkdownFile(res, mdPath, reqPath = "") {
     const baseUrl = "https://datly-docs.vercel.app";
     const pagePath = reqPath.startsWith("/") ? reqPath : `/docs/${reqPath}`;
     const canonicalUrl = normalizeMeta(baseUrl + pagePath);
+
     const rawHtml = await renderEJSFile("docs", {
       title,
       description,
@@ -129,8 +142,8 @@ export async function renderMarkdownFile(res, mdPath, reqPath = "") {
       date,
       iconUrl,
     });
-    const finalHtml = minifyHtml(rawHtml);
 
+    const finalHtml = minifyHtml(rawHtml);
     return res.send(finalHtml);
   } catch (err) {
     console.error("Docs render error:", err);
