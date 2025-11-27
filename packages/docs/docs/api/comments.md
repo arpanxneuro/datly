@@ -1,3 +1,5 @@
+# 💬 Comments
+
 Generate comment data tied to posts — useful for feed testing and UI edge cases.
 
 ```http

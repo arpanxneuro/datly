@@ -1,3 +1,5 @@
+# 📝 Posts
+
 Retrieve dynamically generated blog posts from **Datly** — perfect for frontend testing, prototype feeds, or AI prompt data generation.
 
 ---
@@ -53,5 +55,3 @@ Example (JSON with nulls):
 ```http
 GET /posts?limit=3&nulls=true
 ```
-
----

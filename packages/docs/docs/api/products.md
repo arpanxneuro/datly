@@ -1,3 +1,5 @@
+#🛍️ Products
+
 Retrieve realistic, mock e-commerce product data from **Datly** — perfect for frontend prototyping, dashboard demos, and marketplace simulations.`
 
 ---
@@ -53,5 +55,3 @@ Example (JSON):
 ```http
 GET /products?limit=5&format=json
 ```
-
----

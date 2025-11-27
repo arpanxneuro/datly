@@ -1,3 +1,5 @@
+# 👥 Users
+
 Retrieve dynamically generated user data from **Datly** — ideal for mock testing, frontend development, or AI-driven prototypes.
 
 ---
@@ -62,5 +64,3 @@ Example (CSV with nulls):
 ```http
 GET /users?limit=5&format=csv&nulls=true
 ```
-
----

@@ -1,3 +1,5 @@
+# 💰 Loans
+
 Generate synthetic loan records for financial dashboards and model testing.
 ---
 

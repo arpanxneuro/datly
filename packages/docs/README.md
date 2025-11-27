@@ -1,6 +1,6 @@
 # Datly API Documentation
 
-[API](https://datly-api.onrender.com) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly.pages.dev)
+[API](https://datly-docs.vercel.app/api) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly-docs.vercel.app)
 
 ---
 
@@ -15,14 +15,9 @@ Complete API documentation with examples for:
 - 💰 Loans
 - 📰 News
 
-## 🌐 Base URL
-
-```
-https://api-datly.vercel.app
-```
 
 ## 🔗 Links
 
-- [Live API](https://datly-api.onrender.com)
+- [Live API](https://datly-docs.vercel.app/api)
 - [GitHub](https://github.com/arpanxneuro/datly)
-- [Docs Site](https://datly.pages.dev)
+- [Docs Site](https://datly-docs.vercel.app)

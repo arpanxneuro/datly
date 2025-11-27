@@ -1,3 +1,5 @@
+# 👍 Likes
+
 Generate lightweight like records for posts — useful for metrics dashboards and social interactions.
 
 ---

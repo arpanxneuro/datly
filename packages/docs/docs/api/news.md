@@ -1,3 +1,5 @@
+# 📰 News
+
 Generate realistic news articles for testing dashboards, analytics, or feed displays — including headlines, summaries, categories, authors, and optional images.
 
 ---

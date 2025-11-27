@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "packages/api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "packages/api/views/**/*",
+      "use": "@vercel/static"
+    }
+  ]
+}
