@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %> — Docs</title>
+    <% if (description) { %>
+    <meta name="description" content="<%= description %>" />
+    <% } %> <meta name="author" content="${author || "Datly"}"/>
+    <meta name="robots" content="index, follow" />
+    <% if (canonicalUrl) { %>
+    <link rel="canonical" href="<%= canonicalUrl %>" />
+    <% } %>
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="${title}" />
+    <% if (description) { %>
+    <meta property="og:description" content="<%= description %>" />
+    <% } %> <% if (canonicalUrl) { %>
+    <meta property="og:url" content="<%= canonicalUrl %>" />
+    <% } %>
+    <meta property="og:site_name" content="Datly Docs" />
+    <% if (imageUrl) { %>
+    <meta property="og:image" content="<%= imageUrl %>" />
+    <% } %>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${title}" />
+    <% if (description) { %>
+    <meta name="twitter:description" content="<%= description %>" />
+    <% } %> <% if (imageUrl) { %>
+    <meta name="twitter:image" content="<%= imageUrl %>" />
+    <% } %>
+    <link rel="stylesheet" href="/docs/assets/css/theme-datly.css" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="<%= iconUrl || '/docs/static/img/favicon.ico' %>"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="<%= iconUrl || '/docs/static/img/favicon.ico' %>"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        background-color: var(--background-color, #0d1117);
+        color: var(--text-color, #e0e6f2);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        background-color: var(--sidebar-background, #0b0f16);
+        border-bottom: 1px solid var(--border-color, #30363d);
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        gap: 24px;
+        z-index: 100;
+      }
+
+      .navbar a {
+        color: var(--text-color, #e0e6f2);
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+
+      .navbar a:hover {
+        color: var(--primary-color, #3399ff);
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 56px;
+        width: 260px;
+        height: calc(100vh - 56px);
+        background-color: var(--sidebar-background, #0b0f16);
+        border-right: 1px solid var(--border-color, #30363d);
+        overflow-y: auto;
+        padding: 16px 0;
+        z-index: 90;
+      }
+
+      .sidebar-links {
+        list-style: none;
+      }
+
+      .sidebar-links li {
+        padding: 8px 16px;
+      }
+
+      .sidebar-links li a {
+        color: var(--text-color-secondary, #a3a9b6);
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+        transition: color 0.2s;
+      }
+
+      .sidebar-links li a:hover {
+        color: var(--link-color, #3399ff);
+      }
+
+      .sidebar-links li strong {
+        color: var(--text-color, #e0e6f2);
+        display: block;
+        padding: 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 8px;
+      }
+
+      .sidebar-links li strong:first-child {
+        margin-top: 0;
+      }
+
+      .sidebar-links li.nested {
+        padding-left: 32px;
+      }
+
+      /* Main content */
+      .main-content {
+        margin-left: 260px;
+        margin-top: 56px;
+        flex: 1;
+        padding: 32px;
+        max-width: 1000px;
+        width: 100%;
+        word-wrap: break-word;
+      }
+
+      .main-content h1,
+      .main-content h2,
+      .main-content h3,
+      .main-content h4,
+      .main-content h5,
+      .main-content h6 {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        color: var(--text-color, #e0e6f2);
+      }
+
+      .main-content p,
+      .main-content li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+        color: var(--text-color-secondary, #a3a9b6);
+      }
+
+      .main-content pre,
+      .main-content pre code {
+        display: block !important;
+        white-space: pre !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        background: var(--code-background-color, #161b22);
+        color: var(--code-text-color, #79c0ff);
+        padding: 12px;
+        border-radius: 6px;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        tab-size: 2;
+      }
+
+      .main-content a {
+        color: var(--link-color, #3399ff);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .main-content a:hover {
+        color: var(--link-hover-color, #33ccff);
+        text-decoration: underline;
+      }
+
+      @media (max-width: 800px) {
+        .sidebar {
+          display: none;
+        }
+        .main-content {
+          margin-left: 0;
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-color, #30363d);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-color-secondary, #a3a9b6);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="/docs" style="font-weight: 600; font-size: 16px"
+        >📖 Datly Docs</a
+      >
+      <a href="https://datly-docs.vercel.app" target="_blank">API</a>
+      <a href="https://github.com/arpanxneuro/datly" target="_blank">GitHub</a>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="sidebar-links">
+        <li><a href="/">🏠 Home</a></li>
+        <li style="padding: 4px 16px"><strong>Getting Started</strong></li>
+        <li class="nested"><a href="/docs/intro">Welcome</a></li>
+        <li class="nested"><a href="/docs/getting-started">Quick Start</a></li>
+        <li class="nested"><a href="/docs/examples">Examples</a></li>
+        <li style="padding: 4px 16px"><strong>API Reference</strong></li>
+        <li class="nested"><a href="/docs/api/users">👥 Users</a></li>
+        <li class="nested"><a href="/docs/api/products">🛍️ Products</a></li>
+        <li class="nested"><a href="/docs/api/posts">📝 Posts</a></li>
+        <li class="nested"><a href="/docs/api/comments">💬 Comments</a></li>
+        <li class="nested"><a href="/docs/api/likes">👍 Likes</a></li>
+        <li class="nested"><a href="/docs/api/loans">💰 Loans</a></li>
+        <li class="nested"><a href="/docs/api/news">📰 News</a></li>
+        <li style="padding: 4px 16px"><strong>Info</strong></li>
+        <li class="nested">
+          <a href="https://github.com/arpanxneuro/datly" target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content markdown-section"><%- safeBody %></main>
+  </body>
+</html>
