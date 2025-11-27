@@ -1,6 +1,6 @@
 # Datly API Documentation
 
-[API](https://datly-docs.vercel.app/api) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly-docs.vercel.app)
+[API](https://datly.onrender.com/api) • [GitHub](https://github.com/arpanxneuro/datly) • [Docs](https://datly.onrender.com)
 
 ---
 
@@ -18,6 +18,6 @@ Complete API documentation with examples for:
 
 ## 🔗 Links
 
-- [Live API](https://datly-docs.vercel.app/api)
+- [Live API](https://datly.onrender.com/api)
 - [GitHub](https://github.com/arpanxneuro/datly)
-- [Docs Site](https://datly-docs.vercel.app)
+- [Docs Site](https://datly.onrender.com)

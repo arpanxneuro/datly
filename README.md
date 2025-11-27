@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://api-datly.vercel.app" target="_blank">
+  <a href="https://datly.onrender.com/api" target="_blank">
     <img src="https://img.shields.io/badge/API-Live-green?style=flat-square" alt="API Live">
   </a>
-  <a href="https://datly.pages.dev" target="_blank">
+  <a href="https://datly.onrender.com" target="_blank">
     <img src="https://img.shields.io/badge/Docs-View-blue?style=flat-square" alt="Docs">
   </a>
   <a href="https://github.com/arpanxneuro/datly" target="_blank">
@@ -45,13 +45,13 @@
 
 | Endpoint    | Description           | Sample URL                                       |
 | ----------- | --------------------- | ------------------------------------------------ |
-| `/users`    | Fetch random users    | `https://api-datly.vercel.app/users?limit=10`    |
-| `/products` | Fetch random products | `https://api-datly.vercel.app/products?limit=10` |
-| `/posts`    | Fetch random posts    | `https://api-datly.vercel.app/posts?limit=10`    |
-| `/comments` | Fetch random comments | `https://api-datly.vercel.app/comments?limit=10` |
-| `/likes`    | Fetch random likes    | `https://api-datly.vercel.app/likes?limit=10`    |
-| `/loans`    | Fetch random loans    | `https://api-datly.vercel.app/loans?limit=10`    |
-| `/news`     | Fetch random news     | `https://api-datly.vercel.app/news?limit=10`     |
+| `/users`    | Fetch random users    | `https://datly.onrender.com/api/users?limit=10`    |
+| `/products` | Fetch random products | `https://datly.onrender.com/api/products?limit=10` |
+| `/posts`    | Fetch random posts    | `https://datly.onrender.com/api/posts?limit=10`    |
+| `/comments` | Fetch random comments | `https://datly.onrender.com/api/comments?limit=10` |
+| `/likes`    | Fetch random likes    | `https://datly.onrender.com/api/likes?limit=10`    |
+| `/loans`    | Fetch random loans    | `https://datly.onrender.com/api/loans?limit=10`    |
+| `/news`     | Fetch random news     | `https://datly.onrender.com/api/news?limit=10`     |
 
 > Every endpoint supports the `limit` query param (default: 10). Example response is with `limit: 1`
 

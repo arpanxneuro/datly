@@ -30,7 +30,7 @@ export default function DatlyExample() {
     async function fetchUsers() {
       try {
         const response = await fetch("
-        https://api-datly.vercel.app/users?limit=3");
+        https://datly.onrender.com/api/users?limit=3");
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
         setUsers(data.users || []);

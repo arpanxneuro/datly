@@ -128,7 +128,7 @@ export async function renderMarkdownFile(res, mdPath, reqPath = "") {
     const iconUrl = normalizeMeta(
       frontmatter.image || "/docs/static/img/favicon.ico"
     );
-    const baseUrl = "https://datly-docs.vercel.app";
+    const baseUrl = "https://datly.onrender.com";
     const pagePath = reqPath.startsWith("/") ? reqPath : `/docs/${reqPath}`;
     const canonicalUrl = normalizeMeta(baseUrl + pagePath);
 
